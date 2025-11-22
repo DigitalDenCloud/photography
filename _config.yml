@@ -23,6 +23,21 @@ social_urls:
   linkedin: "https://www.linkedin.com/in/digitalden/"
   github: "https://www.github.com/DigitalDenCloud"
 
-# Configure which exif data to display
-# Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
+# Configure which EXIF data to display on photos
+# Tag is the actual EXIF field name, icon is a FontAwesome icon
+# Format: Keep as a single line JSON array (no line breaks)
+# To toggle fields: remove or add {"tag":"FIELD","icon":"ICON"} items
+#
+# Available fields:
+#   Model - Camera model (ILCE-6700, EOS R5, etc.)
+#   LensModel - Lens name (E 18-135mm F3.5-5.6 OSS, etc.)
+#   FocalLength - Focal length in mm (35mm, 50mm, etc.)
+#   FNumber - Aperture (f/1.4, f/2.8, f/11, etc.)
+#   ExposureTime - Shutter speed (1/30, 1/1000, etc.)
+#   ISOSpeedRatings - ISO sensitivity (100, 400, 3200, etc.)
+#   Make - Camera brand (Sony, Canon, Nikon, etc.)
+#
+# Example: To show only lens and focal length:
+# exif: '[{"tag":"LensModel","icon":"fa fa-dot-circle"},{"tag":"FocalLength","icon":"fa fa-search-plus"}]'
+#
 exif: '[{"tag":"Model","icon":"fa fa-camera-retro"},{"tag":"LensModel","icon":"fa fa-dot-circle"},{"tag":"FocalLength","icon":"fa fa-search-plus"},{"tag":"FNumber","icon":"far fa-dot-circle"},{"tag":"ExposureTime","icon":"far fa-clock"},{"tag":"ISOSpeedRatings","icon":"fa fa-info-circle"}]'
